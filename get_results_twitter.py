@@ -9,11 +9,12 @@ import sqlite3
 
 if __name__ == '__main__':
 
+    database_folder = '/home/igor/Documents/KCL/Dissertation/code/database/'
     accounts = ['aosfatos', 'BudgITng', 'openspending', 'OKFN']
 
     for account in accounts:
 
-        conn = sqlite3.connect('/home/igor/Documents/KCL/Dissertation/code/database/dissertation_' + account + '.db')
+        conn = sqlite3.connect(database_folder + 'dissertation_' + account + '.db')
         cursor = conn.cursor()
 
         cursor.execute('SELECT max(id) FROM tweets')
@@ -39,7 +40,7 @@ if __name__ == '__main__':
 
         retweet_ratio = float(retweeted)/float(tweet_count)
         interactor_ratio = float(unique_users_interaction)/float(followers)
-        snp = (retweet_mention_ratio + interactor_ratio)/2
+        snp = (retweet_ratio + interactor_ratio)/2
 
         print 'Results for account: ' + account
         print 'Tweets: ' + unicode(tweet_count)
