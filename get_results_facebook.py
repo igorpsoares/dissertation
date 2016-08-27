@@ -9,11 +9,12 @@ import sqlite3
 
 if __name__ == '__main__':
 
+    database_folder = '/home/igor/Documents/KCL/Dissertation/code/database/'
     accounts = ['aosfatos.org', 'budgitng', 'OpenSpending', 'OKFNetwork']
 
     for account in accounts:
 
-        conn = sqlite3.connect('/home/igor/Documents/KCL/Dissertation/code/database/dissertation_' + account + '_fb.db')
+        conn = sqlite3.connect(database_folder + 'dissertation_' + account + '_fb.db')
         cursor = conn.cursor()
 
         cursor.execute('SELECT max(date_time) FROM page_stats')
