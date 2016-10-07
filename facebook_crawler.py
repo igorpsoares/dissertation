@@ -175,8 +175,10 @@ if __name__ == '__main__':
         
     logging.info('Execution started')
 
-    #accounts = ['aosfatos.org', 'budgitng', 'OpenSpending', 'OKFNetwork']
-    accounts = ['OpenSpending']
+    # Account list
+    # Example:
+    # accounts = ['aosfatos.org', 'budgitng', 'OpenSpending', 'OKFNetwork']
+    accounts = ['']
     graph_url = 'https://graph.facebook.com/'
 
     # The time of last weeks crawl

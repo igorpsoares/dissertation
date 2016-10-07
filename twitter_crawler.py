@@ -97,10 +97,15 @@ if __name__ == '__main__':
         
     logging.info('Execution started')
 
-    accounts = ['aosfatos', 'BudgITng', 'openspending', 'OKFN']
+    # Account list
+    # example:
+    # accounts = ['aosfatos', 'BudgITng', 'openspending', 'OKFN']
+    accounts = ['']
+
     loop_count = 0
     pause_loop_max = 50
 
+    # Twitter app credentials
     consumer_key = ''
     consumer_secret = ''
     access_token = ''
