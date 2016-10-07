@@ -9,8 +9,12 @@ import sqlite3
 
 if __name__ == '__main__':
 
-    database_folder = '/home/igor/Documents/KCL/Dissertation/code/database/'
-    accounts = ['aosfatos.org', 'budgitng', 'OpenSpending', 'OKFNetwork']
+    # SQLite database folder and account list
+    # Example:
+    # database_folder = '/home/igor/devel/crawler/'
+    # accounts = ['aosfatos.org', 'budgitng', 'OpenSpending', 'OKFNetwork']
+    database_folder = ''
+    accounts = ['']
 
     for account in accounts:
 
